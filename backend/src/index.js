@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
     res.send('Herzlich willkommen auf meinem Server!!!')
 })
 
+app.use("/api/users", userRouter)
+
 app.listen(PORT, () => {
     console.log(`Server listen on Port: ${PORT}`);
 })
