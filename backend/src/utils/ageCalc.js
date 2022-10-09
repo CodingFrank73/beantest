@@ -11,6 +11,8 @@ const getAgeByYear = (dateOfBirth) => {
     return (currentYear - birthYear)
 }
 
+
+
 module.exports = {
     subtractYears,
     getAgeByYear

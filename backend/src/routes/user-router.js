@@ -134,7 +134,18 @@ userRouter.get("/myProfile",
         }
     })
 
+userRouter.post("/location",
+    async (req, res) => {
+        try {
+            const loc = await UserService.getLocation(req.body.latitude, req.body.longitude)
 
+            res.status(201).json(loc)
+
+        } catch (error) {
+            console.log(error)
+            res.status(500).json({ error: error.message || "Unknown error while registering new user." })
+        }
+    })
 
 
 

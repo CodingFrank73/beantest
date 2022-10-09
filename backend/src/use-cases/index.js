@@ -1,6 +1,6 @@
 
 const { registerUser } = require("./users/register-user");
-
+const { getLocation } = require('./users/get-location');
 
 // const { refreshUserToken } = require("./users/refresh-user-token");
 // const { showMyProfile } = require("./users/show-profile");
@@ -14,7 +14,8 @@ const { registerUser } = require("./users/register-user");
 
 
 const UserService = {
-    registerUser
+    registerUser,
+    getLocation
     // refreshUserToken,
     // showMyProfile,
     // editAvatar,
